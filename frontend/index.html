@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineBook - Movie Ticket Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        🎬 CineBook
+    </div>
+
+    <div class="nav-links">
+        <span>Home</span>
+        <span>Movies</span>
+        <span>My Bookings</span>
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            WELCOME TO CINEBOOK
+        </p>
+
+        <h1>
+            Book your movie
+            <br>
+            <span>experience.</span>
+        </h1>
+
+        <p>
+            Choose your favourite movie, theatre,
+            show time and seats.
+        </p>
+
+    </div>
+
+</section>
+
+
+<main class="booking-container">
+
+
+    <!-- LEFT SIDE -->
+
+    <section class="booking-card">
+
+        <h2>🎬 Select Movie</h2>
+
+
+        <div class="movie-grid">
+
+
+            <div class="movie-card active"
+                 onclick="selectMovie(this,'Avengers',200,'10:00 AM')">
+
+                <div class="poster avengers">
+                    AVENGERS
+                </div>
+
+                <h3>Avengers</h3>
+
+                <p>Action • Sci-Fi</p>
+
+                <div class="movie-info">
+                    <span>⭐ 8.5</span>
+                    <span>₹200</span>
+                </div>
+
+            </div>
+
+
+            <div class="movie-card"
+                 onclick="selectMovie(this,'Avatar',150,'1:00 PM')">
+
+                <div class="poster avatar">
+                    AVATAR
+                </div>
+
+                <h3>Avatar</h3>
+
+                <p>Adventure • Fantasy</p>
+
+                <div class="movie-info">
+                    <span>⭐ 8.0</span>
+                    <span>₹150</span>
+                </div>
+
+            </div>
+
+
+            <div class="movie-card"
+                 onclick="selectMovie(this,'KGF',180,'4:00 PM')">
+
+                <div class="poster kgf">
+                    KGF
+                </div>
+
+                <h3>KGF</h3>
+
+                <p>Action • Drama</p>
+
+                <div class="movie-info">
+                    <span>⭐ 8.7</span>
+                    <span>₹180</span>
+                </div>
+
+            </div>
+
+
+            <div class="movie-card"
+                 onclick="selectMovie(this,'Jawan',120,'7:00 PM')">
+
+                <div class="poster jawan">
+                    JAWAN
+                </div>
+
+                <h3>Jawan</h3>
+
+                <p>Action • Thriller</p>
+
+                <div class="movie-info">
+                    <span>⭐ 7.8</span>
+                    <span>₹120</span>
+                </div>
+
+            </div>
+
+
+            <div class="movie-card"
+                 onclick="selectMovie(this,'Pushpa 2',180,'9:00 PM')">
+
+                <div class="poster pushpa">
+                    PUSHPA 2
+                </div>
+
+                <h3>Pushpa 2</h3>
+
+                <p>Action • Drama</p>
+
+                <div class="movie-info">
+                    <span>⭐ 8.2</span>
+                    <span>₹180</span>
+                </div>
+
+            </div>
+
+
+            <div class="movie-card"
+                 onclick="selectMovie(this,'Salaar',200,'6:30 PM')">
+
+                <div class="poster salaar">
+                    SALAAR
+                </div>
+
+                <h3>Salaar</h3>
+
+                <p>Action • Thriller</p>
+
+                <div class="movie-info">
+                    <span>⭐ 8.1</span>
+                    <span>₹200</span>
+                </div>
+
+            </div>
+
+
+            <div class="movie-card"
+                 onclick="selectMovie(this,'Kantara',160,'3:00 PM')">
+
+                <div class="poster kantara">
+                    KANTARA
+                </div>
+
+                <h3>Kantara</h3>
+
+                <p>Drama • Thriller</p>
+
+                <div class="movie-info">
+                    <span>⭐ 8.6</span>
+                    <span>₹160</span>
+                </div>
+
+            </div>
+
+
+            <div class="movie-card"
+                 onclick="selectMovie(this,'Leo',180,'8:00 PM')">
+
+                <div class="poster leo">
+                    LEO
+                </div>
+
+                <h3>Leo</h3>
+
+                <p>Action • Thriller</p>
+
+                <div class="movie-info">
+                    <span>⭐ 8.0</span>
+                    <span>₹180</span>
+                </div>
+
+            </div>
+
+
+            <div class="movie-card"
+                 onclick="selectMovie(this,'RRR',170,'11:00 AM')">
+
+                <div class="poster rrr">
+                    RRR
+                </div>
+
+                <h3>RRR</h3>
+
+                <p>Action • Drama</p>
+
+                <div class="movie-info">
+                    <span>⭐ 8.8</span>
+                    <span>₹170</span>
+                </div>
+
+            </div>
+
+
+            <div class="movie-card"
+                 onclick="selectMovie(this,'Vikram',190,'5:00 PM')">
+
+                <div class="poster vikram">
+                    VIKRAM
+                </div>
+
+                <h3>Vikram</h3>
+
+                <p>Action • Crime</p>
+
+                <div class="movie-info">
+                    <span>⭐ 8.3</span>
+                    <span>₹190</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- THEATRE -->
+
+        <div class="selection-section">
+
+            <h2>🏢 Select Theatre</h2>
+
+            <select id="theatre">
+
+                <option value="PVR Cinemas - Bangalore">
+                    PVR Cinemas - Bangalore
+                </option>
+
+                <option value="INOX - Mangalore">
+                    INOX - Mangalore
+                </option>
+
+                <option value="Cinepolis - Mysore">
+                    Cinepolis - Mysore
+                </option>
+
+                <option value="PVR Orion - Bangalore">
+                    PVR Orion - Bangalore
+                </option>
+
+                <option value="INOX Mantri Mall - Bangalore">
+                    INOX Mantri Mall - Bangalore
+                </option>
+
+                <option value="Cinepolis - Hubli">
+                    Cinepolis - Hubli
+                </option>
+
+                <option value="PVR Forum Mall - Hyderabad">
+                    PVR Forum Mall - Hyderabad
+                </option>
+
+                <option value="INOX - Chennai">
+                    INOX - Chennai
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- SHOW TIME -->
+
+        <div class="selection-section">
+
+            <h2>🕐 Show Time</h2>
+
+            <div class="show-time" id="showTime">
+                10:00 AM
+            </div>
+
+        </div>
+
+
+        <!-- SEATS -->
+
+        <div class="selection-section">
+
+            <h2>💺 Select Seats</h2>
+
+            <div class="screen">
+                SCREEN
+            </div>
+
+
+            <div class="seat-layout">
+
+                <!-- A -->
+
+                <div class="seat-row">
+
+                    <button class="seat">A1</button>
+                    <button class="seat">A2</button>
+                    <button class="seat">A3</button>
+                    <button class="seat">A4</button>
+
+                </div>
+
+
+                <!-- B -->
+
+                <div class="seat-row">
+
+                    <button class="seat">B1</button>
+                    <button class="seat">B2</button>
+                    <button class="seat">B3</button>
+                    <button class="seat">B4</button>
+
+                </div>
+
+
+                <!-- C -->
+
+                <div class="seat-row">
+
+                    <button class="seat">C1</button>
+                    <button class="seat">C2</button>
+                    <button class="seat">C3</button>
+                    <button class="seat">C4</button>
+
+                </div>
+
+
+                <!-- D -->
+
+                <div class="seat-row">
+
+                    <button class="seat">D1</button>
+                    <button class="seat">D2</button>
+                    <button class="seat">D3</button>
+                    <button class="seat">D4</button>
+
+                </div>
+
+
+                <!-- E -->
+
+                <div class="seat-row">
+
+                    <button class="seat">E1</button>
+                    <button class="seat">E2</button>
+                    <button class="seat">E3</button>
+                    <button class="seat">E4</button>
+
+                </div>
+
+
+                <!-- F -->
+
+                <div class="seat-row">
+
+                    <button class="seat">F1</button>
+                    <button class="seat">F2</button>
+                    <button class="seat">F3</button>
+                    <button class="seat">F4</button>
+
+                </div>
+
+
+                <!-- G -->
+
+                <div class="seat-row">
+
+                    <button class="seat">G1</button>
+                    <button class="seat">G2</button>
+                    <button class="seat">G3</button>
+                    <button class="seat">G4</button>
+
+                </div>
+
+
+                <!-- H -->
+
+                <div class="seat-row">
+
+                    <button class="seat">H1</button>
+                    <button class="seat">H2</button>
+                    <button class="seat">H3</button>
+                    <button class="seat">H4</button>
+
+                </div>
+
+
+                <!-- I -->
+
+                <div class="seat-row">
+
+                    <button class="seat">I1</button>
+                    <button class="seat">I2</button>
+                    <button class="seat">I3</button>
+                    <button class="seat">I4</button>
+
+                </div>
+
+
+                <!-- J -->
+
+                <div class="seat-row">
+
+                    <button class="seat">J1</button>
+                    <button class="seat">J2</button>
+                    <button class="seat">J3</button>
+                    <button class="seat">J4</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- LEGEND -->
+
+            <div class="legend">
+
+                <span>
+                    <i class="available"></i>
+                    Available
+                </span>
+
+                <span>
+                    <i class="selected-box"></i>
+                    Selected
+                </span>
+
+                <span>
+                    <i class="booked-box"></i>
+                    Booked
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RIGHT SIDE -->
+
+    <aside class="summary-card">
+
+        <h2>🎟 Booking Summary</h2>
+
+
+        <div class="summary-item">
+
+            <span>Movie</span>
+
+            <strong id="summaryMovie">
+                Avengers
+            </strong>
+
+        </div>
+
+
+        <div class="summary-item">
+
+            <span>Theatre</span>
+
+            <strong id="summaryTheatre">
+                PVR Cinemas - Bangalore
+            </strong>
+
+        </div>
+
+
+        <div class="summary-item">
+
+            <span>Show Time</span>
+
+            <strong id="summaryTime">
+                10:00 AM
+            </strong>
+
+        </div>
+
+
+        <div class="summary-item">
+
+            <span>Seats</span>
+
+            <strong id="summarySeats">
+                None
+            </strong>
+
+        </div>
+
+
+        <div class="summary-item">
+
+            <span>Tickets</span>
+
+            <strong id="ticketCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="total">
+
+            <span>Total</span>
+
+            <strong>
+                ₹<span id="total">0</span>
+            </strong>
+
+        </div>
+
+
+        <button class="book"
+                onclick="bookTicket()">
+
+            🎟 Book Ticket
+
+        </button>
+
+
+        <button class="cancel"
+                onclick="cancelBooking()">
+
+            Cancel Booking
+
+        </button>
+
+
+        <p id="message"></p>
+
+    </aside>
+
+</main>
+
+
+<!-- BOOKING TICKET -->
+
+<div id="ticketModal"
+     class="ticket-modal">
+
+    <div class="ticket">
+
+        <button class="close-ticket"
+                onclick="closeTicket()">
+
+            ✕
+
+        </button>
+
+
+        <div class="ticket-header">
+
+            <h1>🎬 CineBook</h1>
+
+            <p>Booking Confirmed 🎉</p>
+
+        </div>
+
+
+        <div class="ticket-line"></div>
+
+
+        <div class="ticket-details">
+
+            <div>
+                <span>Booking ID</span>
+                <strong id="ticketBookingId">---</strong>
+            </div>
+
+            <div>
+                <span>Movie</span>
+                <strong id="ticketMovie">---</strong>
+            </div>
+
+            <div>
+                <span>Theatre</span>
+                <strong id="ticketTheatre">---</strong>
+            </div>
+
+            <div>
+                <span>Show Time</span>
+                <strong id="ticketTime">---</strong>
+            </div>
+
+            <div>
+                <span>Seats</span>
+                <strong id="ticketSeats">---</strong>
+            </div>
+
+            <div>
+                <span>Tickets</span>
+                <strong id="ticketTickets">---</strong>
+            </div>
+
+        </div>
+
+
+        <div class="ticket-line"></div>
+
+
+        <div class="ticket-total">
+
+            <span>Total Amount</span>
+
+            <strong>
+                ₹<span id="ticketAmount">0</span>
+            </strong>
+
+        </div>
+
+
+        <p class="thank-you">
+            Thank you for booking with CineBook ❤️
+        </p>
+
+
+        <button class="done-button"
+                onclick="closeTicket()">
+
+            Done
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        © 2026 CineBook • Movie Ticket Booking System
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
